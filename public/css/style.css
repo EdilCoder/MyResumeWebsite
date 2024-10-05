@@ -1,10 +1,37 @@
-.body {
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/*.body {
     background: #282828;
     background: linear-gradient(-45deg, steelblue, lightsteelblue, snow);
     background-size: 400% 400%;
-    animation: Gradient 20s ease infinite;
+    animation: Gradient 10s ease infinite;
     min-height: 100%;
     font-family: Bookman, URW Bookman L, serif;
+}*/
+.body {
+    background: #dddddd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, steelblue, lightsteelblue, snow);
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    flex: 1;
+}
+
+.about-section {
+    margin-top: 50px;
+}
+
+.project-section {
+    margin-top: 50px;
 }
 
 @-webkit-keyframes Gradient {
@@ -103,12 +130,71 @@ nav {
     min-height: 95vh;
 }
 
-footer {
+/*footer {
     text-align: left;
     color: black;
     padding-left: 20px;
+}*/
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .website-title {
     display: none;
 }
+/*======Projects list=======*/
+.proj {
+    padding: 10px;
+}
+
+.proj-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.preview-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.preview-tech {
+    font-style: italic;
+    color: #555;
+}
+
+.preview-summary {
+    margin-top: 10px;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-detail {
+    margin-top: 20px;
+}
+
+.project-detail h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.project-detail p {
+    font-size: 16px;
+    color: #333;
+}
+

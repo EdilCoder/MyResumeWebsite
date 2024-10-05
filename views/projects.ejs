@@ -1,9 +1,25 @@
 <%- include('partials/header') %>
 
-<div class="text-center">
-    <h1>My Projects</h1>
-    <p class="mt-4">Here is some of my project.</p>
+<div class="container text-center about-section">
+    <h2>My Projects</h2>
+    <p class="mt-4">Here are some projects that I have worked on</p>
 
+    <div class="project-list">
+        <% projects.forEach(function(project) { %>
+            <a href="<%= project.link %>">
+                <div class="project-row">
+                    <div class="col-md-4 col-sm-4 proj">
+                        <img src="<%= project.img %>" class="proj-img" style="width: 250px" alt="<%= project.name %>">
+                    </div>
+                    <div class="col-md-7 col-sm-7 offset-md-1 offset-sm-1 preview">
+                        <div class="preview-title"><%= project.name %></div>
+                        <div class="preview-tech"><%= project.tech %></div>
+                        <div class="preview-summary"><%= project.summary %></div>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
+    </div>
 </div>
 
 <%- include('partials/footer') %>
