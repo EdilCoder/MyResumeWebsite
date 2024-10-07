@@ -154,12 +154,30 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s ease; /* 过渡效果 */
+}
+
+.project-row:hover .proj-img {
+    transform: scale(1.05); /* 悬停时放大1.05倍 */
+}
+
+@media (max-width: 768px) {
+    .proj-img {
+        max-width: 200px;
+        width: 50%;     /* 设置图片在小屏幕上占据80%的宽度 */
+        margin: 0 auto; /* 让图片水平居中显示 */
+    }
+}
+
+.preview {
+    text-align: left;
 }
 
 .project-row {
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
@@ -168,6 +186,14 @@ footer {
     font-size: 24px;
     font-weight: bold;
 }
+
+
+.project-row:hover .preview-title {
+
+    color: #ffffff;           /* 悬停时的文本颜色 */
+    transition: background-color 0.3s ease; /* 过渡效果 */
+}
+
 
 .preview-tech {
     font-style: italic;
@@ -198,3 +224,23 @@ footer {
     color: #333;
 }
 
+/*================*/
+
+.center {
+    text-align: center;
+}
+.back-button a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: white;
+}
+
+/*=======test1 page======*/
+/*.project-detail iframe {
+    width: 80%; !* 使iframe宽度100%以适应父容器 *!
+    height: auto; !* 高度自动调整 *!
+}*/

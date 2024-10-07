@@ -2,11 +2,11 @@
 
 <div class="container text-center about-section">
     <h2>My Projects</h2>
-    <p class="mt-4">Here are some projects that I have worked on</p>
+    <p class="mt-4 mb-5">Here are some projects that I have worked on</p>
 
-    <div class="project-list">
+    <!--<div class="project-list">
         <% projects.forEach(function(project) { %>
-            <a href="<%= project.link %>">
+            <a href="<%= project.link %>" class="text-decoration-none text-dark">
                 <div class="project-row">
                     <div class="col-md-4 col-sm-4 proj">
                         <img src="<%= project.img %>" class="proj-img" style="width: 250px" alt="<%= project.name %>">
@@ -19,7 +19,24 @@
                 </div>
             </a>
         <% }) %>
+    </div>-->
+    <div class="project-list">
+        <% projects.forEach(function(project) { %>
+            <a href="<%= project.link %>" class="text-decoration-none text-dark">
+                <div class="project-row row mb-4">
+                    <div class="col-12 col-md-4 proj">
+                        <img src="<%= project.img %>" class="img-fluid proj-img" alt="<%= project.name %>">
+                    </div>
+                    <div class="col-12 col-md-8 preview text-start">
+                        <div class="preview-title fw-bold"><%= project.name %></div>
+                        <div class="preview-tech text-muted"><%= project.tech %></div>
+                        <div class="preview-summary"><%= project.summary %></div>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
     </div>
+
 </div>
 
 <%- include('partials/footer') %>

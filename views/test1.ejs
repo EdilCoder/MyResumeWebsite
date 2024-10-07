@@ -1,14 +1,39 @@
 <%- include('partials/header') %>
 
 <div class="container project-section">
-    <!--<h2><%= title %></h2>-->
+    <div class="col-12 back-button">
+        <a href="projects">&lt; Back </a>
+    </div>
     <div class="project-detail">
-        <h2>Android App for Graduation Dress Hire</h2>
-        <p>Kotlin, Jetpack Compose, Navigation, Repository, Room, Hilt, ViewModel, Firebase Authentication, Firestore</p>
-        <p>Say goodbye to the stress of graduation gown shopping; GownGrad is your one-stop solution for renting the perfect attire for your special day! This Android app simplifies the process, allowing users to browse gowns based on their university and degree, manage orders, input body measurements, and handle payments—all from their mobile devices. Whether anonymous or registered, users can easily modify or delete orders. Make your graduation day special with GownGrad!</p>
-        <img src="/images/GownGrad.png" style="width: 250px" alt="Android App for Graduation Dress Hire" class="project-image">
+        <h2 class="text-center">Android App for Graduation Dress Hire</h2> <!-- 保持标题居中 -->
+
+        <p class="text-center">Kotlin, Jetpack Compose, Navigation, Repository, Room, Hilt, ViewModel, Firebase Authentication, Firestore</p>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div style="display: flex; justify-content: center; align-items: center; max-width: 100%;">
+                    <div style="position: relative; width: 320px; padding-top: 75%; overflow: hidden; max-height: 180px;">
+                        <iframe src="https://www.youtube.com/embed/7G96eXQMUIc?si=H6UFE5wGghZQOovu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+
+                <p style="text-align: left;">
+                    GownGrad was my capstone <a href="https://github.com/EdilCoder/GownGrad" target="_blank">project</a>, developed as part of my graduation thesis. The main goal was to create a user-friendly Android application that simplifies the process of renting graduation gowns. To efficiently store and manage user data, I utilized Firebase for real-time database capabilities and Room for local data persistence.
+                </p>
+                <p style="text-align: left;">
+                    The app allows users to browse a wide selection of gowns based on their university and degree, ensuring that they can find the perfect attire for their special day. Users can manage their orders seamlessly, input their body measurements, and process payments, all from the convenience of their mobile devices.
+                </p>
+                <p style="text-align: left;">
+                    Upon launching the app, users are presented with an intuitive interface that makes the gown selection process effortless. Once they select their desired gown, they can easily place an order and make modifications or cancellations if needed. Additionally, I implemented a registration system that allows users to track their order history and manage their preferences.
+                </p>
+                <p style="text-align: left;">
+                    Overall, GownGrad aims to take the stress out of graduation gown rent, providing a comprehensive solution for users to find and rent the ideal attire for their graduation ceremony.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
-
 
 <%- include('partials/footer') %>
