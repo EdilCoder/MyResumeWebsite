@@ -6,10 +6,10 @@
 
     <div class="project-list">
         <% projects.forEach(function(project) { %>
-            <a href="<%= project.link %>" class="text-decoration-none text-dark">
+            <a href="<%= project.link.replace('/', '') %>.html" class="text-decoration-none text-dark">
                 <div class="project-row row mb-4">
                     <div class="col-12 col-md-4 proj">
-                        <img src="<%= project.img %>" class="img-fluid proj-img" alt="<%= project.name %>">
+                        <img src="public<%= project.img %>" class="img-fluid proj-img" alt="<%= project.name %>">
                     </div>
                     <div class="col-12 col-md-8 preview text-start">
                         <div class="preview-title fw-bold"><%= project.name %></div>
